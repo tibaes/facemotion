@@ -5,6 +5,7 @@ What I used during development.
 - OpenCV 3.0
 - DLib 18.18
 - Julia 4.1
+
 You can use my docker image to build a complete envirolment:
 https://github.com/tibaes/golden-heart.git
 
