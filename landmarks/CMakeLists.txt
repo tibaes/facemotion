@@ -2,15 +2,13 @@ cmake_minimum_required(VERSION 2.8.4)
 
 PROJECT(landmarks)
 
-#include(/home/affective/dlib-18.16/dlib/cmake)
-include(/home/dlib/dlib/cmake)
+FIND_PACKAGE(dlib REQUIRED)
 
 add_library(landmarks SHARED landmarks.cpp)
-target_link_libraries(landmarks dlib-shared)
+target_link_libraries(landmarks ${dlib_LIBRARIES})
 
 ADD_EXECUTABLE(landmarksTest main.cpp)
 TARGET_LINK_LIBRARIES(landmarksTest landmarks)
-
 
 #find_package(OpenCV)
 #if (OpenCV_FOUND)
